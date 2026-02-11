@@ -112,27 +112,7 @@ html, body{
       background:#fff;
     }
 
-
-
-/* Allow horizontal swipes inside the carousel on mobile */
-.carousel,
-.slides{
-  touch-action: pan-x;
-}
-
-/* Prevent the page from hijacking the swipe */
-.slide img{
-  user-select: none;
-  -webkit-user-drag: none;
-}
-
-
-
-
-    
-
-
-    
+      
     .slides{
       height:100%;
       display:flex;
@@ -297,20 +277,8 @@ html, body{
       font-size:12px;
       opacity:.75;
     }
-
-
-
-
-.prevBtn, .nextBtn{
-  z-index: 10;
-  position: absolute;
-}
-
-
     
-
-
-    
+   
 
     @media (max-width: 720px){
       .carousel{ aspect-ratio: 4 / 5; } /* nicer on phones */
@@ -395,40 +363,6 @@ html, body{
   </main>
 
   <script>
-
-
-
-
-
-
-
-const slidesEl = document.getElementById("slides"); // your slides container
-
-let startX = 0;
-let startY = 0;
-
-slidesEl.addEventListener("touchstart", (e) => {
-  const t = e.touches[0];
-  startX = t.clientX;
-  startY = t.clientY;
-}, { passive: true });
-
-slidesEl.addEventListener("touchend", (e) => {
-  const t = e.changedTouches[0];
-  const dx = t.clientX - startX;
-  const dy = t.clientY - startY;
-
-  // only treat it as a swipe if mostly horizontal
-  if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) {
-    if (dx < 0) nextSlide(); // swipe left
-    else prevSlide();        // swipe right
-  }
-}, { passive: true });
-
-
-
-
-
 
     
     // Helpers
