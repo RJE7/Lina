@@ -281,6 +281,14 @@ html, body{
       .btnRow{ height:120px; }
       #noBtn{ right:8%; }
     }
+
+@media (max-width: 600px){
+  .dots{
+    display: none;
+  }
+}
+
+    
   </style>
 </head>
 
@@ -291,7 +299,7 @@ html, body{
         <h1>Hey babe 💖</h1>
         <div class="sub">I’ve been meaning to ask you something…</div>
       </div>
-      <div style="font-size:34px;">💌💘🌹</div>
+      <div style="font-size:34px;">💌🌹</div>
     </div>
 
     <!-- CAROUSEL -->
@@ -441,7 +449,7 @@ html, body{
 
     yesBtn.addEventListener("click", () => {
       result.style.display = "block";
-      result.textContent = "YAY!!! 💘🥰 I can’t wait to celebrate with you!!";
+      result.textContent = "YAY!!!🥰 I can’t wait to celebrate with you!!";
 
       noBtn.disabled = true;
       yesBtn.disabled = true;
