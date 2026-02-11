@@ -16,20 +16,25 @@
       --shadow: 0 20px 60px rgba(0,0,0,0.18);
     }
     *{box-sizing:border-box}
+
     body{
-      margin:0;
-      min-height:100vh;
-      display:grid;
-      place-items:center;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      color:var(--text);
-      background:
-        radial-gradient(1200px 600px at 20% 20%, #ffffff55, transparent 60%),
-        radial-gradient(900px 500px at 80% 30%, #ffffff55, transparent 60%),
-        linear-gradient(135deg, var(--bg1), var(--bg2));
-      overflow:hidden;
-      padding:24px;
-    }
+  margin:0;
+  min-height:100vh;
+  display:grid;
+  place-items:center;
+  /* ...your other background styles... */
+
+  overflow-x: hidden;   /* only block sideways scroll */
+  overflow-y: auto;     /* allow vertical scroll */
+  -webkit-overflow-scrolling: touch; /* smooth iPhone scrolling */
+  padding:24px;
+}
+
+html, body{
+  height:auto;
+}
+
+    
 
     /* Floating hearts */
     .heart{
